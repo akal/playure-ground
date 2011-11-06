@@ -1,4 +1,5 @@
 (ns maximumlikelyhood)
+;MAXIMUM LIKELYHOOD computation for ai-class.com
 
 (defn add-vecs [vec-of-vecs]
   (reduce (fn [x y] (map + x y)) vec-of-vecs))
@@ -15,6 +16,7 @@
 
 
 ;sigma sqared
+;TODO: to be updated for handing [[][][]...] inputs
 (defn variance [inp]
   (let [m (mean inp)]
     (* (/ 1 (count inp))
